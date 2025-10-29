@@ -60,6 +60,13 @@
 
 @media (min-width: 769px) {
     .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .team-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
     }
