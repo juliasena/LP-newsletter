@@ -7,7 +7,7 @@
     <title>Data&Cafe | Homepage</title>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
-     <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,40 +17,41 @@
 </head>
 
 <body>
-    <header >
+    <header>
         <div class="container-header">
-             <button class="mobile-menu" aria-expanded="false" aria-controls="main-nav">
-            <img src="/static/assets/drawer.svg" alt="Abrir menu" />
-        </button>
+            <button class="mobile-menu">
+                <img src="/static/assets/drawer.svg" alt="Icone de abrir menu" />
+            </button>
 
-        <a href="/" class="logo-link">
-            <img class="logo" src="/static/assets/logotipo-data-cafe.png" alt="Logotipo" />
-        </a>
+            <a href="/" class="logo-link">
+                <img class="logo" src="/static/assets/logotipo-data-cafe.png" alt="Logotipo" />
+            </a>
 
-        <nav class="nav-links">
-            <div class="menu-header">
-                <p class="title-menu-mob">Menu</p>
-                <div class="close-menu">
-                    <img src="{{ url_for('static', filename='assets/icon-close.svg') }}" alt="Ícone de Fechar Menu" />
+            <nav class="nav-links">
+                <div class="menu-header">
+                    <p class="title-menu-mob">Menu</p>
+                    <div class="close-menu">
+                        <img src="{{ url_for('static', filename='assets/icon-close.svg') }}"
+                            alt="Icone de fechar menu" />
+                    </div>
                 </div>
-            </div>
-            <ul>
-                <li class="{% if request.path == '/' %}active{% endif %}">
-                    <a href="/">Home</a>
-                </li>
-                <li class="{% if request.path == '/time' %}active{% endif %}">
-                    <a href="/time">Time</a>
-                </li>
-            </ul>
-        </nav>
+                <ul>
+                    <li class="{% if request.path == '/' %}active{% endif %}">
+                        <a href="/">Home</a>
+                    </li>
+                    <li class="{% if request.path == '/time' %}active{% endif %}">
+                        <a href="/time">Time</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
 
     <section class="container-hero">
         <div class="container-title-hero">
             <h1 class="title-hero">
-                As <span class="text-terracota">novidades</span> mais quentes e
-                frescas do dia, entregues antes do seu primeiro
+                As <span class="text-terracota">novidades</span><br /> mais quentes e
+                frescas do dia, entregues antes<br /> do seu primeiro<br />
                 <span class="text-terracota">gole de café</span>
             </h1>
             <p class="subtitle-hero">Assine agora a Newsletter!</p>
@@ -64,9 +65,8 @@
 
     <section class="container-about">
         <div class="img-wrapper">
-            <img src="/static/assets/img-ilustrativa.svg" alt="Ilustração de tela com IA e café" />
+            <img src="/static/assets/img-newsletter.png" alt="Ilustração de tela com IA e café" />
         </div>
-        <div class="barra-colorida"></div>
         <div class="about-text-column">
             <h2 class="title-about">Nossa Curadoria</h2>
             <p class="text-about">
@@ -77,14 +77,16 @@
         </div>
     </section>
 
-    <section id="form-inscrever" class="forms-newsletter">
+    <section class="forms-newsletter">
         <h2 class="title-forms">Inscreva-se agora</h2>
 
-        <form action="/inscrever" method="POST" id="form">
+        <div id="feedback-message" class="feedback-message"></div>
+
+        <form id="form">
             <div id="input-container">
                 <div class="input-box">
                     <label for="nome">Nome Completo</label>
-                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" />
+                    <input type="text" id="name" name="nome" placeholder="Digite seu nome completo" />
                 </div>
 
                 <div class="input-box">
@@ -94,7 +96,7 @@
 
                 <div class="input-box input-box-full">
                     <label for="mensagem">Mensagem</label>
-                    <input <textarea id="mensagem" name="mensagem" rows="4"
+                    <textarea id="message" name="mensagem" rows="4"
                         placeholder="Deixe de sugestão temas que você gostaria de ler"></textarea>
                 </div>
             </div>

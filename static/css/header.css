@@ -1,5 +1,6 @@
 header {
-  background-color: #fff;
+  background-color: var(--color-white);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,13 +14,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 16px;
   background-color: transparent;
   width: 100%;
 }
 
 .mobile-menu {
   cursor: pointer;
+  background-color: transparent;
+  border: none;
 }
 
 .mobile-menu img {
@@ -27,18 +29,23 @@ header {
   height: 28px;
 }
 
+.logo-link {
+  margin: 0 auto;
+}
+
 .logo {
   max-height: 40px;
+  max-width: 180px;
 }
 
 .nav-links {
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: var(--color-off-white);
-  transform: translateX(100%);
+  background-color: var(--color-white);
+  transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
   z-index: 100;
   display: flex;
@@ -54,17 +61,18 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px 16px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--color-dark-transparent);
 }
 
 .title-menu-mob {
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 18px;
+  margin: 0 auto;
 }
 
 .close-menu img {
   width: 20px;
-  height: 20x;
+  height: 20px;
   cursor: pointer;
 }
 
@@ -75,11 +83,12 @@ header {
 
 .nav-links li {
   padding: 15px 20px;
+  border-bottom: 1px solid var(--color-dark-transparent);
 }
 
 .nav-links a {
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 16px;
   color: var(--color-dark);
   display: block;
 }
@@ -103,6 +112,14 @@ header {
     margin: 0 auto;
   }
 
+  .logo-link {
+    margin: 0;
+  }
+
+  .logo {
+    max-width: 200px;
+  }
+
   .nav-links {
     position: static;
     transform: none;
@@ -119,5 +136,10 @@ header {
 
   .nav-links li {
     padding: 0 15px;
+    border-bottom: none;
+  }
+
+  .nav-links a {
+    font-size: 18px;
   }
 }

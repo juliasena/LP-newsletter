@@ -2,21 +2,18 @@
 
 Este projeto é a entrega do Teste Prático para a vaga de Desenvolvedor Front-end, focado na criação de uma Landing Page (LP) responsiva, integrada com um micro-serviço em Python (Flask) para simular o consumo de dados reais.
 
-## 🚀 Acesso ao Projeto
+## 🚀 Layout e Acesso ao Projeto
 
-| :--- | :--- |
-| **URL do Projeto (Hospedado)** | [https://juliasena.pythonanywhere.com/time ()] |
-
+**URL do Projeto (Hospedado)** | [https://juliasena.pythonanywhere.com/time ()] |
+**Design e Layout (Figma)** | [Acesse o Figma do Projeto Aqui]([LINK DO FIGMA]) |
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
-A escolha das tecnologias foi determinada pelos requisitos do teste técnico e pela necessidade de integrar o Front-end com um serviço de *templating* dinâmico.
-
-* **HTML5 & Jinja2:** Estrutura semântica e *templating* do Jinja2 para renderização de dados dinâmicos (consumidos pela API) e herança de templates.
-* **CSS3:** Estilização completa, seguindo a abordagem **Mobile First** e implementando responsividade para Tablet e Desktop através de *media queries*.
-* **JavaScript (ES6):** Manipulação do DOM para a funcionalidade de menu mobile (hambúrguer)..
-* **Python (Flask) & Requests:** Framework utilizado para roteamento da aplicação, consumo de API externa (simulada) via `requests`, e entrega dos dados para os templates.
+* **Front-end:** HTML5, CSS3, JavaScript.
+* **Back-end:** Python (Flask)
+* **Deploy:** PythonAnywhere
+* **Desenvolvimento:** Design System baseado em variáveis CSS.
 * **API Externa:** Utilização da API `https://randomuser.me/api/` para popular dinamicamente a seção "Time" com dados de curadores fictícios.
 
 ---

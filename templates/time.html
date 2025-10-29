@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data&amp;Cafe | Time </title>
+    <title>Data&Cafe | Time </title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/time.css') }}" />
@@ -17,32 +17,33 @@
 </head>
 
 <body>
-    <header >
+    <header>
         <div class="container-header">
-             <button class="mobile-menu" aria-expanded="false" aria-controls="main-nav">
-            <img src="/static/assets/drawer.svg" alt="Abrir menu" />
-        </button>
+            <button class="mobile-menu">
+                <img src="/static/assets/drawer.svg" alt="Icone de abrir menu" />
+            </button>
 
-        <a href="/" class="logo-link">
-            <img class="logo" src="/static/assets/logotipo-data-cafe.png" alt="Logotipo" />
-        </a>
+            <a href="/" class="logo-link">
+                <img class="logo" src="/static/assets/logotipo-data-cafe.png" alt="Logotipo" />
+            </a>
 
-        <nav class="nav-links">
-            <div class="menu-header">
-                <p class="title-menu-mob">Menu</p>
-                <div class="close-menu">
-                    <img src="{{ url_for('static', filename='assets/icon-close.svg') }}" alt="Ícone de Fechar Menu" />
+            <nav class="nav-links">
+                <div class="menu-header">
+                    <p class="title-menu-mob">Menu</p>
+                    <div class="close-menu">
+                        <img src="{{ url_for('static', filename='assets/icon-close.svg') }}"
+                            alt="Icone de fechar menu" />
+                    </div>
                 </div>
-            </div>
-            <ul>
-                <li class="{% if request.path == '/' %}active{% endif %}">
-                    <a href="/">Home</a>
-                </li>
-                <li class="{% if request.path == '/time' %}active{% endif %}">
-                    <a href="/time">Time</a>
-                </li>
-            </ul>
-        </nav>
+                <ul>
+                    <li class="{% if request.path == '/' %}active{% endif %}">
+                        <a href="/">Home</a>
+                    </li>
+                    <li class="{% if request.path == '/time' %}active{% endif %}">
+                        <a href="/time">Time</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
 

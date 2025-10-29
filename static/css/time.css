@@ -7,13 +7,15 @@
 
 .time-title {
     font-size: 35px;
+    font-weight: 700;
     color: var(--color-dark);
     margin-bottom: 10px;
 }
 
 .time-subtitle {
-    font-size: 1.25rem;
-    color: #666;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-dark);
     margin-bottom: 60px;
 }
 
@@ -21,13 +23,6 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 40px;
-}
-
-@media (min-width: 769px) {
-    .team-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 30px;
-    }
 }
 
 .team-card {
@@ -61,4 +56,11 @@
     color: var(--color-dark);
     margin-bottom: 15px;
     overflow-wrap: break-word;
+}
+
+@media (min-width: 769px) {
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
 }
