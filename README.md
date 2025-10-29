@@ -5,7 +5,7 @@ Este projeto é a entrega do Teste Prático para a vaga de Desenvolvedor Front-e
 ## 🚀 Acesso ao Projeto
 
 | :--- | :--- |
-| **URL do Projeto (Hospedado)** | [COLE AQUI O LINK DO SEU PROJETO ()] |
+| **URL do Projeto (Hospedado)** | [https://juliasena.pythonanywhere.com/time ()] |
 
 ---
 
@@ -36,8 +36,7 @@ Para rodar o projeto localmente, siga os passos abaixo:
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [SEU LINK DO REPO AQUI]
-    cd [NOME-DO-SEU-REPOSITORIO]
+    git clone LP-newsletter.git
     ```
 
 2.  **Crie e Ative o Ambiente Virtual (Recomendado):**
