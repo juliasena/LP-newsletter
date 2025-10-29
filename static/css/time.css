@@ -1,0 +1,64 @@
+.container-time {
+    padding: 80px 20px;
+    text-align: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.time-title {
+    font-size: 35px;
+    color: var(--color-dark);
+    margin-bottom: 10px;
+}
+
+.time-subtitle {
+    font-size: 1.25rem;
+    color: #666;
+    margin-bottom: 60px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+@media (min-width: 769px) {
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+    }
+}
+
+.team-card {
+    background-color: var(--color-off-white);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--color-terracota);
+    margin-bottom: 20px;
+}
+
+.member-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-dark);
+}
+
+.member-email {
+    font-size: 15px;
+    font-weight: 300;
+    text-decoration: none;
+    color: var(--color-dark);
+    margin-bottom: 15px;
+    overflow-wrap: break-word;
+}

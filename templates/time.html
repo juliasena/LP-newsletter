@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data&amp;Cafe | Time </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/time.css') }}" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <header >
+        <div class="container-header">
+             <button class="mobile-menu" aria-expanded="false" aria-controls="main-nav">
+            <img src="/static/assets/drawer.svg" alt="Abrir menu" />
+        </button>
+
+        <a href="/" class="logo-link">
+            <img class="logo" src="/static/assets/logotipo-data-cafe.png" alt="Logotipo" />
+        </a>
+
+        <nav class="nav-links">
+            <div class="menu-header">
+                <p class="title-menu-mob">Menu</p>
+                <div class="close-menu">
+                    <img src="{{ url_for('static', filename='assets/icon-close.svg') }}" alt="Ícone de Fechar Menu" />
+                </div>
+            </div>
+            <ul>
+                <li class="{% if request.path == '/' %}active{% endif %}">
+                    <a href="/">Home</a>
+                </li>
+                <li class="{% if request.path == '/time' %}active{% endif %}">
+                    <a href="/time">Time</a>
+                </li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <section class="container-time">
+        <h1 class="time-title">Nossos Curadores de Dados</h1>
+        <p class="time-subtitle">
+            Conheça os especialistas que filtram o ruído para você.
+        </p>
+
+        <div class="team-grid">
+            {% for pessoa in curadores_data %}
+            <div class="team-card">
+                <img class="profile-photo" src="{{ pessoa.picture.large }}"
+                    alt="Foto de {{ pessoa.name.first }} {{ pessoa.name.last }}" />
+
+                <h3 class="member-name">
+                    {{ pessoa.name.first }} {{ pessoa.name.last }}
+                </h3>
+                <p class="member-email">
+                    <a href="mailto:{{ pessoa.email }}">{{ pessoa.email }}</a>
+                </p>
+                </p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    <footer class="container-footer">
+        <a href="/" class="logo-link">
+            <img class="logo-footer" src="/static/assets/logotipo-data-cafe.png" alt="Logotipo" />
+        </a>
+        <div class="container-redes">
+            <a href="https://www.instagram.com/" target="_blank">
+                <img class="icon-social" src="/static/assets/icon-instagram.png" alt="Icone do Instagram" />
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank">
+                <img class="icon-social" src="/static/assets/icon-linkedin.png" alt="Icone do Linkedin" />
+            </a>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
