@@ -4,8 +4,9 @@ Este projeto é a entrega do Teste Prático para a vaga de Desenvolvedor Front-e
 
 ## 🚀 Layout e Acesso ao Projeto
 
-**URL do Projeto (Hospedado)** | [https://juliasena.pythonanywhere.com/time ()] |
-**Design e Layout (Figma)** | [Acesse o Figma do Projeto Aqui]([LINK DO FIGMA]) |
+**URL do Projeto** | [https://juliasena.pythonanywhere.com] |
+
+**Layout (Figma)** | [Acesse o Figma do Projeto Aqui](https://www.figma.com/design/dJ693InCZT6QFunPR79ZD3/Mockup---Newsletter-IA?node-id=0-1&m=dev&t=SLL1n4UyzCQQ43Ym-1)
 ---
 
 ## 🛠️ Tecnologias Utilizadas
@@ -49,7 +50,7 @@ Para rodar o projeto localmente, siga os passos abaixo:
 
 4.  **Execute a Aplicação Flask:**
     ```bash
-    export FLASK_APP=[SEU_ARQUIVO_PYTHON_PRINCIPAL].py # Ex: app.py
+    export FLASK_APP= main.py 
     flask run
     ```
 
